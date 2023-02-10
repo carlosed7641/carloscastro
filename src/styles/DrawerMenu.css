@@ -1,0 +1,50 @@
+@import url('./global.css');
+
+
+.drawer-menu {
+    background-color: var(--secondary-color);
+    height: 100%;
+    position: fixed;
+    width: 70%;
+    display: flex;
+    transition: 1s ease;
+    animation: swipeLeft 1s ease forwards;
+    right: -360px;
+    padding: 25px;
+    padding-right: 5px;
+}
+
+.menu-items-drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.menu-items-drawer li {
+    list-style: none;
+    padding-bottom: 10px;
+    border-bottom: .5px solid #B2B2B2;
+}
+
+.menu-items-drawer li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.menu-items-drawer li a svg {
+    margin-right: 7px;
+}
+
+
+@media screen and (min-width: 40em) {
+    .drawer-menu {
+        display: none;
+    }
+}
+
+@keyframes swipeLeft {
+    100% {
+        transform: translateX(-360px);
+    }
+}

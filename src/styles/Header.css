@@ -1,0 +1,76 @@
+@import url('./global.css');
+
+header {
+    background-color: var(--secondary-color);
+    padding: 15px 20px;
+}
+
+.container-header {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.menu-items-header {
+    visibility: hidden;
+    height: 0;
+    margin: 10px 0;
+}
+
+.logo,
+.menu-items-header li a,
+.menu-items-header li p {
+    transition: all 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    filter: invert(49%) sepia(34%) saturate(2131%) hue-rotate(66deg) brightness(101%) contrast(91%);
+}
+
+.mobile-menu {
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (min-width: 40em) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .menu-items-header {
+        height: auto;
+        visibility: visible;
+        display: flex;
+        gap: 40px;
+    }
+
+    .menu-items-header li {
+        list-style: none;
+    }
+
+    .menu-items-header li a {
+        text-decoration: none;
+        color: var(--black);
+        font-size: .9rem;
+    }
+
+    .menu-items-header li a:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+
+    p.theme-mode {
+        cursor: pointer;
+    }
+
+    p.theme-mode:hover {
+        color: var(--primary-color);
+    }
+
+    .menu-items-header li a svg {
+        margin-right: 7px;
+    }
+}
