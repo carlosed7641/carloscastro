@@ -14,9 +14,9 @@ header {
 }
 
 .menu-items-header {
-    visibility: hidden;
-    height: 0;
-    margin: 10px 0;
+    /* visibility: hidden;
+    height: 0; */
+    display: none;
 }
 
 .logo,
@@ -29,20 +29,13 @@ header {
     filter: invert(49%) sepia(34%) saturate(2131%) hue-rotate(66deg) brightness(101%) contrast(91%);
 }
 
-.mobile-menu {
-    font-size: 30px;
-    transition: all 0.3s ease-in-out;
-}
-
 
 @media screen and (min-width: 40em) {
-    .mobile-menu {
-        display: none;
-    }
+
 
     .menu-items-header {
         height: auto;
-        visibility: visible;
+        /* visibility: visible; */
         display: flex;
         gap: 40px;
     }

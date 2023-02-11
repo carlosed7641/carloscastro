@@ -2,18 +2,16 @@ import '../styles/Header.css'
 import { FC, useState } from 'react'
 import { DrawerMenu } from './DrawerMenu';
 import logo from "../assets/logo.svg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
 import { MenuListItem } from './MenuListItem';
 import { menuListInfo } from '../utils/menuListItem';
+import { ThemeButton } from './ThemeButton';
+import { MenuHamburguer } from './MenuHamburguer';
 
 
 export const Header: FC = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState<boolean>(false)
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false)
-
-
+    
     return (
         <>
             <header>
@@ -27,11 +25,12 @@ export const Header: FC = () => {
                                 <MenuListItem icon={icon} name={name} />
                             ))
                         }
-                        <li onClick={() => setIsDarkMode(!isDarkMode)}>
-                            <p className='theme-mode' title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}><FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} width={16} /></p>
-                        </li>
+                        <ThemeButton />
                     </ul>
-                    <p className='mobile-menu' onClick={() => setShowMobileMenu(!showMobileMenu)}><FontAwesomeIcon icon={showMobileMenu ? faClose : faBars} /></p>
+                    <MenuHamburguer
+                        showMobileMenu={showMobileMenu}
+                        setShowMobileMenu={setShowMobileMenu}
+                    />
                 </div>
             </header>
             {showMobileMenu && <DrawerMenu />}
