@@ -6,16 +6,12 @@ header {
 }
 
 .container-header {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
     align-items: center;
 }
 
 .menu-items-header {
-    /* visibility: hidden;
-    height: 0; */
     display: none;
 }
 

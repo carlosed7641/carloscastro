@@ -15,7 +15,7 @@ export const Header: FC = () => {
     return (
         <>
             <header>
-                <div className='container-header'>
+                <div className='container-header container'>
                     <a href="/" className="logo">
                         <img src={logo} alt="Carlos Castro" height={35} />
                     </a>

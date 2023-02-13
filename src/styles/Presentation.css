@@ -1,0 +1,45 @@
+@import url('./global.css');
+
+
+.presentation-container {
+    margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+.presentation-info {
+    margin: 0 20px;
+}
+
+.presentation-image img {
+    border-radius: 50%;
+}
+
+.presentation-primary-text {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.presentation-info p {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 40em) {
+    .presentation-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .presentation-primary-text {
+        font-size: 36px;
+    }
+    
+
+    .presentation-secondary-text {
+        font-size: 44px;
+    }
+    
+}
