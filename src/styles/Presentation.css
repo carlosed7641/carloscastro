@@ -2,7 +2,8 @@
 
 
 .presentation-container {
-    margin: 35px auto;
+    overflow: hidden;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -14,7 +15,53 @@
 }
 
 .presentation-image img {
+    width: 300px;
+    border: 1px solid var(--gray);
     border-radius: 50%;
+    padding: 30px;
+    transform: translateY(-40px);
+}
+
+.presentation-image {
+    margin: 0 auto;
+    position: relative;
+    animation: anime 1.5s infinite alternate-reverse forwards ease-in-out;
+}
+
+.presentation-image::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    background-image: url(../assets/html5.svg);
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.overlay-icons::after {
+    content: "";
+    position: absolute;
+    bottom: 183px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/css3.svg);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.presentation-image::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 32%;
+    background-image: url(../assets/javascript.svg);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
 }
 
 .presentation-primary-text {
@@ -27,19 +74,53 @@
     margin-top: 10px;
 }
 
+.curriculum {
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.presentation-info {
+    margin-bottom: 20px;
+}
+
 @media screen and (min-width: 40em) {
     .presentation-container {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 0 60px 40px;
+        overflow: initial;
     }
 
-    .presentation-primary-text {
-        font-size: 36px;
+    .presentation-info {
+        margin-bottom: 0;
     }
     
-
     .presentation-secondary-text {
         font-size: 44px;
     }
+
+    .presentation-image {
+        display: block;
+        width: auto;
+    }
     
+}
+
+/* Image Animation */
+@keyframes anime {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }

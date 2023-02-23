@@ -2,6 +2,7 @@
 
 
 .drawer-menu {
+    z-index: 9;
     background-color: var(--secondary-color);
     height: 100%;
     position: fixed;
