@@ -14,18 +14,9 @@
     margin: 0 20px;
 }
 
-.presentation-image img {
-    width: 300px;
-    border: 1px solid var(--gray);
-    border-radius: 50%;
-    padding: 30px;
-    transform: translateY(-40px);
-}
-
 .presentation-image {
-    margin: 0 auto;
     position: relative;
-    animation: anime 1.5s infinite alternate-reverse forwards ease-in-out;
+    animation: animation 1.5s infinite alternate-reverse forwards ease-in-out;
 }
 
 .presentation-image::before {
@@ -50,6 +41,14 @@
     background-image: url(../assets/css3.svg);
     background-repeat: no-repeat;
     z-index: 1;
+}
+
+.presentation-image img {
+    width: 300px;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    padding: 30px;
+    transform: translateY(-40px);
 }
 
 .presentation-image::after {
@@ -92,7 +91,6 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0 60px 40px;
-        overflow: initial;
     }
 
     .presentation-info {
@@ -106,12 +104,17 @@
     .presentation-image {
         display: block;
         width: auto;
+    }  
+}
+
+@media screen and (min-width: 64em) {
+    .presentation-container {
+        overflow: initial;
     }
-    
 }
 
 /* Image Animation */
-@keyframes anime {
+@keyframes animation {
   0% {
     transform: rotate(5deg);
   }
