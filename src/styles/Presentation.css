@@ -90,7 +90,7 @@
     .presentation-container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 60px 40px;
+        padding: 80px 60px 40px;
     }
 
     .presentation-info {

@@ -1,0 +1,22 @@
+.title-aboutme {
+    text-align: center;
+}
+
+.line-aboutme {
+    font-family: initial;
+}
+
+.container-aboutme {
+    background-color: var(--secondary-color);
+    padding: 30px;
+}
+
+.elements-about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.list-skills {
+    padding-left: 35px;
+}

@@ -1,5 +1,5 @@
 import { AppProvider } from "./context/AppProvider"
-import { Header, Presentation, AboutMe } from './components'
+import { Header, Presentation, AboutMe, Skills } from './components'
 
 export const App = () => {
   return (
@@ -7,6 +7,7 @@ export const App = () => {
         <Header />
         <Presentation />
         <AboutMe />
+        <Skills />
     </AppProvider>
 
   );
