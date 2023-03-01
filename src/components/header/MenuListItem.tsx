@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react';
-import { MenuListProps } from '../interfaces/interfaces';
+import { MenuListProps } from '../../interfaces/interfaces';
 
 
 export const MenuListItem: FC<MenuListProps> = ({ icon, name }) => {

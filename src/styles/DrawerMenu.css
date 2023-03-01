@@ -6,13 +6,16 @@
     background-color: var(--secondary-color);
     height: 100%;
     position: fixed;
-    width: 70%;
+    right: -273px;
+    width: 273px;
     display: flex;
-    transition: 1s ease;
-    animation: swipeLeft 1s ease forwards;
-    right: -360px;
     padding: 25px;
     padding-right: 5px;
+    transition: all 0.5s linear;
+}
+
+.drawer-active {
+    right: 0;
 }
 
 .menu-items-drawer {
@@ -44,8 +47,14 @@
     }
 }
 
-@keyframes swipeLeft {
+@keyframes openDrawer {
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes closeDrawer {
     100% {
-        transform: translateX(-360px);
+        transform: translateX(0);
     }
 }

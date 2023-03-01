@@ -1,4 +1,4 @@
-import '../styles/MenuHamburguer.css'
+import '../../styles/MenuHamburguer.css'
 
 
 interface MenuHamburguerProps {

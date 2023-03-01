@@ -1,17 +1,21 @@
 import { FC, useContext } from 'react';
-import '../styles/DrawerMenu.css'
-import { menuListInfo } from '../utils/menuListItem';
+import '../../styles/DrawerMenu.css'
+import { menuListInfo } from '../../utils/menuListItem';
 import { MenuListItem } from './MenuListItem';
 import { ThemeButton } from './ThemeButton';
-import { AppContext } from '../context/AppContext';
-import { AppContextProps } from '../interfaces';
+import { AppContext } from '../../context/AppContext';
+import { AppContextProps } from '../../interfaces';
 
-export const DrawerMenu: FC = () => {
+interface Props {
+  isActive: boolean
+}
+
+export const DrawerMenu: FC<Props> = ({isActive}) => {
 
   const { isDarkMode } = useContext<AppContextProps>(AppContext)
   
   return (
-    <aside className='drawer-menu'>
+    <aside className={`drawer-menu ${isActive ? 'drawer-active' : ''}`}>
       <ul className='menu-items-drawer'>
         {
           menuListInfo.map(({ icon, name }) => (

@@ -1,12 +1,12 @@
-import { Header } from "./components/Header"
 import { AppProvider } from "./context/AppProvider"
-import { Presentation } from './components/Presentation'
+import { Header, Presentation, AboutMe } from './components'
 
 export const App = () => {
   return (
     <AppProvider>
         <Header />
         <Presentation />
+        <AboutMe />
     </AppProvider>
 
   );

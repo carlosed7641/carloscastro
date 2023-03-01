@@ -1,11 +1,11 @@
 import '../styles/Header.css'
 import { FC, useState } from 'react'
-import { DrawerMenu } from './DrawerMenu';
+import { DrawerMenu } from './header/DrawerMenu';
 import logo from "../assets/logo.svg"
-import { MenuListItem } from './MenuListItem';
+import { MenuListItem } from './header/MenuListItem';
 import { menuListInfo } from '../utils/menuListItem';
-import { ThemeButton } from './ThemeButton';
-import { MenuHamburguer } from './MenuHamburguer';
+import { ThemeButton } from './header/ThemeButton';
+import { MenuHamburguer } from './header/MenuHamburguer';
 
 
 export const Header: FC = () => {
@@ -33,7 +33,7 @@ export const Header: FC = () => {
                     />
                 </div>
             </header>
-            {showMobileMenu && <DrawerMenu />}
+           <DrawerMenu isActive={showMobileMenu} />
         </>
     )
 }
