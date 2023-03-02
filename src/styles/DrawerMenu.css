@@ -1,7 +1,5 @@
-@import url('./global.css');
-
-
 .drawer-menu {
+    top: 69px;
     z-index: 9;
     background-color: var(--secondary-color);
     height: 100%;

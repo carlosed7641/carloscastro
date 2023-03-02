@@ -3,7 +3,7 @@ import { FC, useState } from 'react'
 import { DrawerMenu } from './header/DrawerMenu';
 import logo from "../assets/logo.svg"
 import { MenuListItem } from './header/MenuListItem';
-import { menuListInfo } from '../utils/menuListItem';
+import { menuListInfo } from '../utils/menuListItems';
 import { ThemeButton } from './header/ThemeButton';
 import { MenuHamburguer } from './header/MenuHamburguer';
 

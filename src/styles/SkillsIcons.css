@@ -1,0 +1,20 @@
+.skill-icon {
+    margin: 25px;
+    padding: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    list-style: none;
+    color: var(--primary-color);
+    height: 62px;
+    cursor: pointer;
+}
+
+.skill-icon:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.skill-icon span svg {
+    height: 30px;
+    width: 30px;
+}

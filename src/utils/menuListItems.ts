@@ -17,9 +17,5 @@ export const menuListInfo: MenuListProps[] = [
     {
         name: 'Contacto',
         icon: faAddressBook
-    },
-    {
-        name: 'Sobre mí',
-        icon: faUser
     }
 ]

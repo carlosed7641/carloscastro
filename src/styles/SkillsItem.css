@@ -1,0 +1,19 @@
+.skill-item {
+    list-style: none;
+    background-color: var(--secondary-color);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    background-color: var(--white);
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgb(0 0 0 / 0.24);
+}
+
+.skill-item span {
+    color: var(--primary-color);
+}

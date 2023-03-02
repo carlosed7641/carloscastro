@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 import '../../styles/DrawerMenu.css'
-import { menuListInfo } from '../../utils/menuListItem';
+import { menuListInfo } from '../../utils/menuListItems';
 import { MenuListItem } from './MenuListItem';
 import { ThemeButton } from './ThemeButton';
 import { AppContext } from '../../context/AppContext';

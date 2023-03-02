@@ -4,7 +4,7 @@ export const AboutMe = () => {
   return (
     <div className='container-aboutme'> 
       <div className='elements-about-me container'>
-        <h2 className='title-aboutme'>Acerca de mí <span className='line-aboutme'>_____</span></h2>
+        <h2 className='title-aboutme'>Sobre mí <span className='line-aboutme'>_____</span></h2>
         <p>Soy ingeniero de sistemas y desarrolador frontend, vivo en Barranquilla, Colombia.</p>
         <p>Actualmente me dedico a estudiar en línea y trabajo para una compañía realizando sitios e-commerce.</p>
         <p>Soy muy competente en HTML y CSS, también he creado proyectos con JavaScript y TypeScript utilizando React. Actualmente sigo trabajando para mejorar mis habilidades en TypeScript y aprendiendo NodeJS para adentrarme al desarollo backend.</p>
