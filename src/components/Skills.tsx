@@ -5,7 +5,7 @@ import { SkillsIcons } from './skills/SkillsIcons';
 
 export const Skills = () => {
   return (
-    <div className='skills'>
+    <div id='skills' className='skills'>
       <section className='container container-skills'>
         <div className='container-benefits'>
           <h2 className='title-skills'>Beneficios <span className='line-skills'>____</span></h2>
@@ -17,7 +17,7 @@ export const Skills = () => {
         <ul className='container-list-skills'>
           {
             skillsItems.map(({ icon, skill, description }) => (
-              <SkillsItem icon={icon} skill={skill} description={description} />
+              <SkillsItem key={skill} icon={icon} skill={skill} description={description} />
             ))
           }
         </ul>
@@ -25,7 +25,7 @@ export const Skills = () => {
       <ul className='container-icons-skills'>
         {
           iconSkills.map(({ icon, name }) => (
-            <SkillsIcons icon={icon} name={name} />
+            <SkillsIcons key={name} icon={icon} name={name} />
           ))
         }
       </ul>

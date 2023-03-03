@@ -2,7 +2,7 @@ import '../styles/AboutMe.css'
 
 export const AboutMe = () => {
   return (
-    <div className='container-aboutme'> 
+    <div id='about' className='container-aboutme'> 
       <div className='elements-about-me container'>
         <h2 className='title-aboutme'>Sobre mí <span className='line-aboutme'>_____</span></h2>
         <p>Soy ingeniero de sistemas y desarrolador frontend, vivo en Barranquilla, Colombia.</p>

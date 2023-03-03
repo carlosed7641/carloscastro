@@ -8,9 +8,10 @@ import { AppContextProps } from '../../interfaces';
 
 interface Props {
   isActive: boolean
+  setIsActive: (value: boolean) => void
 }
 
-export const DrawerMenu: FC<Props> = ({isActive}) => {
+export const DrawerMenu: FC<Props> = ({isActive, setIsActive }) => {
 
   const { isDarkMode } = useContext<AppContextProps>(AppContext)
   
@@ -18,8 +19,8 @@ export const DrawerMenu: FC<Props> = ({isActive}) => {
     <aside className={`drawer-menu ${isActive ? 'drawer-active' : ''}`}>
       <ul className='menu-items-drawer'>
         {
-          menuListInfo.map(({ icon, name }) => (
-            <MenuListItem icon={icon} name={name} />
+          menuListInfo.map(({ id, icon, name }) => (
+            <MenuListItem key={id} id={id} icon={icon} name={name} setIsActive={setIsActive} />
           ))
         }
        <ThemeButton text={isDarkMode ? 'Modo claro' : 'Modo oscuro'} />

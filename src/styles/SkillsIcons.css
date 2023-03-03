@@ -6,7 +6,9 @@
     list-style: none;
     color: var(--primary-color);
     height: 62px;
+    width: 62px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .skill-icon:hover {

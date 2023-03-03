@@ -1,5 +1,5 @@
 import '../styles/Header.css'
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { DrawerMenu } from './header/DrawerMenu';
 import logo from "../assets/logo.svg"
 import { MenuListItem } from './header/MenuListItem';
@@ -11,18 +11,30 @@ import { MenuHamburguer } from './header/MenuHamburguer';
 export const Header: FC = () => {
 
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false)
-    
+    const [fixed, setFixed] = useState<boolean>(false)
+
+    const handleFixed = () => {
+        window.scrollY >= 69 ? setFixed(true) : setFixed(false)
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleFixed)
+        return () => {
+            window.removeEventListener("scroll", handleFixed)
+        };
+    }, [window.scrollY]);
+
     return (
         <>
-            <header>
+            <header className={`${fixed ? 'shadow-header' : ''}`}>
                 <div className='container-header container'>
                     <a href="/" className="logo">
                         <img src={logo} alt="Carlos Castro" height={35} />
                     </a>
                     <ul className='menu-items-header'>
                         {
-                            menuListInfo.map(({ icon, name }) => (
-                                <MenuListItem icon={icon} name={name} />
+                            menuListInfo.map(({ id, icon, name }) => (
+                                <MenuListItem key={id} id={id} icon={icon} name={name} />
                             ))
                         }
                         <ThemeButton />
@@ -33,7 +45,9 @@ export const Header: FC = () => {
                     />
                 </div>
             </header>
-           <DrawerMenu isActive={showMobileMenu} />
+            <DrawerMenu
+                isActive={showMobileMenu}
+                setIsActive={setShowMobileMenu} />
         </>
     )
 }
