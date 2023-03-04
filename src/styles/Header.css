@@ -38,8 +38,6 @@ header {
 
 
     .menu-items-header {
-        height: auto;
-        /* visibility: visible; */
         display: flex;
         gap: 40px;
     }

@@ -16,7 +16,19 @@
     background-color: var(--primary-color);
 }
 
-.skill-icon span svg {
+.skill-icon svg {
     height: 30px;
     width: 30px;
+}
+
+@media screen and (min-width: 40em)  {
+    .skill-icon {
+        margin: 25px 30px;
+    }
+}
+
+@media screen and (min-width: 64em)  {
+    .skill-icon {
+        margin: 25px 35px;
+    }
 }

@@ -4,7 +4,7 @@ export interface MenuListProps {
     id: string
     icon: IconDefinition
     name?: string
-    setIsActive?: (value: boolean) => void
+    setShowMobileMenu?: (value: boolean) => void
 }
 
 export interface IconSkillsProps {

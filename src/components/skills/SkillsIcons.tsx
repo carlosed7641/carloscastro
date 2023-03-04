@@ -8,7 +8,7 @@ import '../../styles/SkillsIcons.css'
 export const SkillsIcons: FC<IconSkillsProps> = ({icon, name}) => {
     return (
         <li className='skill-icon' title={name}>
-            <span><FontAwesomeIcon icon={icon} /></span>
+            <FontAwesomeIcon icon={icon} />
         </li>
     )
 }

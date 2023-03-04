@@ -46,8 +46,8 @@ export const Header: FC = () => {
                 </div>
             </header>
             <DrawerMenu
-                isActive={showMobileMenu}
-                setIsActive={setShowMobileMenu} />
+                showMobileMenu={showMobileMenu}
+                setShowMobileMenu={setShowMobileMenu} />
         </>
     )
 }

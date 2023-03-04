@@ -1,6 +1,6 @@
 .drawer-menu {
     top: 69px;
-    z-index: 9;
+    z-index: 999;
     background-color: var(--secondary-color);
     height: 100%;
     position: fixed;
@@ -9,7 +9,7 @@
     display: flex;
     padding: 25px;
     padding-right: 5px;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
 }
 
 .drawer-active {
