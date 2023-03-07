@@ -7,9 +7,16 @@ export interface MenuListProps {
     setShowMobileMenu?: (value: boolean) => void
 }
 
-export interface IconSkillsProps {
+export enum TypeIcon {
+    skill = 'skill',
+    social = 'social' 
+}
+
+export interface IconSkillsAndSocialProps {
     icon: IconDefinition
     name: string
+    type: TypeIcon.skill | TypeIcon.social
+    url?: string
 }
 
 

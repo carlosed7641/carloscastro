@@ -1,0 +1,16 @@
+.container-contact {
+    margin: 30px auto;
+}
+
+.title-contact {
+    text-align: center;
+}
+
+.line-contact {
+    font-family: initial;
+}
+.container-icons-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

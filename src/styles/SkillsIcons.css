@@ -1,4 +1,4 @@
-.skill-icon {
+.icon {
     margin: 25px;
     padding: 15px;
     border: 1px solid var(--primary-color);
@@ -11,24 +11,24 @@
     transition: all 0.3s ease-in-out;
 }
 
-.skill-icon:hover {
+.icon:hover {
     color: var(--white);
     background-color: var(--primary-color);
 }
 
-.skill-icon svg {
+.icon svg {
     height: 30px;
     width: 30px;
 }
 
 @media screen and (min-width: 40em)  {
-    .skill-icon {
+    .icon {
         margin: 25px 30px;
     }
 }
 
 @media screen and (min-width: 64em)  {
-    .skill-icon {
+    .icon {
         margin: 25px 35px;
     }
 }

@@ -1,0 +1,15 @@
+footer {
+    background-color: var(--secondary-color);
+    padding: 70px 20px;
+}
+
+footer div {
+    text-align: center;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 40em) {
+    footer div {
+        font-size: 14px;
+    }
+}

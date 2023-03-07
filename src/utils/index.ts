@@ -1,3 +1,3 @@
-export * from './iconSkills'
+export * from './iconSkillsAndSocial'
 export * from './menuListItems'
 export * from './skillsItems'

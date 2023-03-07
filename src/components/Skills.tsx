@@ -1,9 +1,12 @@
 import '../styles/Skills.css'
 import { SkillsItem } from './skills/SkillsItem';
-import { skillsItems, iconSkills } from '../utils';
-import { SkillsIcons } from './skills/SkillsIcons';
+import { skillsItems, iconSkillsAndSocial } from '../utils';
+import { SkillsAndSocialIcons } from './skills/SkillsAndSocialIcons';
 
 export const Skills = () => {
+
+  const iconSkills = iconSkillsAndSocial.filter(({type}) => type === 'skill')
+  
   return (
     <div id='skills' className='skills'>
       <section className='container container-skills'>
@@ -24,8 +27,8 @@ export const Skills = () => {
       </section>
       <ul className='container-icons-skills'>
         {
-          iconSkills.map(({ icon, name }) => (
-            <SkillsIcons key={name} icon={icon} name={name} />
+          iconSkills.map(({ icon, name, type }) => (
+            <SkillsAndSocialIcons key={name} icon={icon} name={name} type={type} />
           ))
         }
       </ul>
