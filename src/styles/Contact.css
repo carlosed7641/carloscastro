@@ -4,6 +4,7 @@
 
 .title-contact {
     text-align: center;
+    color: var(--primary-color);
 }
 
 .line-contact {

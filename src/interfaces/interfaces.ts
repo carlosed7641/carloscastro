@@ -19,6 +19,14 @@ export interface IconSkillsAndSocialProps {
     url?: string
 }
 
+export interface ProjectListProps {
+    name: string
+    desc: string
+    languages: string[]
+    repo: string
+    url: string
+    urlImg: string
+}
 
 export interface AppContextProps  {
     isDarkMode: boolean

@@ -1,0 +1,8 @@
+.title-projects {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.title-projects span {
+    font-family: initial;
+}
